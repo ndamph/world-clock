@@ -46,14 +46,14 @@ a {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.cities {
+.city {
   display: flex;
   justify-content: space-between;
   margin: 20px;
   border-bottom: 1px rgba(0, 0, 0, 0.4) dashed;
 }
 
-.cities:last-child {
+.city:last-child {
   border: none;
 }
 
