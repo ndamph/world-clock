@@ -32,6 +32,9 @@ function displayTime() {
 
 function showSelectedCity(event) {
   let selectedCity = event.target.value;
+  if (selectedCity === "current") {
+    selectedCity = moment.tz.guess();
+  }
   let citiesName = selectedCity.replace(`_`, ` `).split(`/`)[1];
   let citiesElement = document.querySelector(`#cities`);
   let citiesDate = moment().tz(selectedCity).format(`MMMM Do YYYY`);
