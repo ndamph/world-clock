@@ -28,6 +28,20 @@ function displayTime() {
     parisDateElement.innerHTML = parisDateFormat;
     parisTimeElement.innerHTML = parisTimeFormat;
   }
+
+  //Manila
+  let manilaElement = document.querySelector(`#manila`);
+  if (manilaElement) {
+    let manilaDateElement = document.querySelector(`#manila-date`);
+    let manilaTimeElement = document.querySelector(`#manila-time`);
+    let manilaDateFormat = moment().tz(`Asia/Manila`).format(`MMMM Do YYYY`);
+    let manilaTimeFormat = moment()
+      .tz(`Asia/Manila`)
+      .format(`h:mm:ss [<span>]A[</span>]`);
+
+    manilaDateElement.innerHTML = manilaDateFormat;
+    manilaTimeElement.innerHTML = manilaTimeFormat;
+  }
 }
 
 function showSelectedCity(event) {
