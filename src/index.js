@@ -35,6 +35,9 @@ function showSelectedCity(event) {
   if (selectedCity === "current") {
     selectedCity = moment.tz.guess();
   }
+  if (selectedCity === "home") {
+    location.reload();
+  }
   let citiesName = selectedCity.replace(`_`, ` `).split(`/`)[1];
   let citiesElement = document.querySelector(`#cities`);
   let citiesDate = moment().tz(selectedCity).format(`MMMM Do YYYY`);
