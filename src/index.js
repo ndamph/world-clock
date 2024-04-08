@@ -52,6 +52,7 @@ function showSelectedCity(event) {
           </div>
           <div class="time">${citiesTime}</div>
         </div>
+        <a href="/">All cities</a>
   `;
 }
 let citySelectElement = document.querySelector(`#city-select`);
